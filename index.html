@@ -781,9 +781,7 @@
     document.querySelector("[data-total]").textContent = eur(total);
     document.querySelector("[data-fine]").textContent = selected.stamp === "?"
       ? `Arvio 585-leiman mukaan – tarkistamme pitoisuuden. Kulta ${spotStr} €/g, ${CONFIG.updated}.`
-      : selected.bullion
-        ? `Sijoituskulta (harkot, kolikot): ${Math.round(rate*100)} % päivän arvosta. Kulta ${spotStr} €/g, ${CONFIG.updated}.`
-        : `${Math.round(rate*100)} % päivän arvosta. Kulta ${spotStr} €/g, ${CONFIG.updated}.`;
+      : `Kulta ${spotStr} €/g, ${CONFIG.updated}. Lopullinen hinta punnituksen ja testin jälkeen.`;
     const msg = `Moi Sulo, laskurisi tarjosi tällaista hintaa: ${selected.stamp === "?" ? "leimaton" : "leima " + selected.stamp}, ${w.toLocaleString("fi-FI")} g → n. ${eur(total)}. Voitko varmistaa hinnan?`;
     document.querySelector("[data-wa-calc]").href = wa(msg);
   }
