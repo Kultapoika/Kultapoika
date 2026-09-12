@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kultapoika – Myy kultasi WhatsAppissa, vähintään 85 % päivän arvosta</title>
+<meta name="description" content="Kultapoika ostaa kultaa: kysy hinta WhatsAppissa, lähetä kulta vakuutettuna ja saat rahat tilille samana päivänä. Vähintään 85 % kullan päivän arvosta, hintatakuulla.">
+<link rel="canonical" href="https://kultapoika.fi/">
+<link rel="icon" type="image/png" sizes="64x64" href="kuvat/favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="kuvat/favicon-512.png">
+<link rel="apple-touch-icon" href="kuvat/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kultapoika – Myy kultasi WhatsAppissa">
+<meta property="og:description" content="Vähintään 85 % kullan päivän arvosta. Kysy hinta, lähetä vakuutettuna, rahat tilille samana päivänä.">
+<meta property="og:image" content="https://kultapoika.fi/kuvat/og.jpg">
+<meta property="og:url" content="https://kultapoika.fi/">
+<meta property="og:locale" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#151412">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Kultapoika","url":"https://kultapoika.fi/","telephone":"+358401788921","description":"Kullan osto WhatsAppissa – vähintään 85 % päivän arvosta.","areaServed":"FI","founder":{"@type":"Person","name":"Sulo Mäki"}}
+</script>
+<style>
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<style>
+  :root {
+    --ivory: #FAF8F4;
+    --ivory-2: #F1EEE7;
+    --white: #FFFFFF;
+    --char: #151412;
+    --char-2: #1F1D1A;
+    --char-3: #2B2824;
+    --ink: #1A1917;
+    --ink-2: #5C5852;
+    --muted: #8C877E;
+    --line: #E3DED4;
+    --line-dark: rgba(255,255,255,.10);
+    --gold: #C8A24A;
+    --gold-2: #E2C57A;
+    --gold-deep: #9A7A2E;
+    --gold-ink: #7A5E1E;
+    --on-dark: #F4F0E8;
+    --on-dark-2: rgba(244,240,232,.68);
+    --wa: #1FA05C;
+    --wa-hover: #188A4E;
+    --radius: 18px;
+    --shadow: 0 2px 6px rgba(26,25,23,.05), 0 24px 60px rgba(26,25,23,.10);
+  }
+
+  * { box-sizing: border-box; }
+  img { max-width: 100%; height: auto; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+  body {
+    margin: 0; background: var(--ivory); color: var(--ink);
+    font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px; line-height: 1.65; font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { margin: 0; text-wrap: balance; line-height: 1.12; letter-spacing: -0.015em; font-weight: 600; }
+  h1 { font-size: clamp(2.5rem, 5.6vw, 4.5rem); font-weight: 600; line-height: 1.05; letter-spacing: -0.025em; }
+  h2 { font-size: clamp(1.8rem, 3.4vw, 2.7rem); }
+  h3 { font-size: 1.25rem; font-weight: 600; }
+  p { margin: 0; }
+  a { color: inherit; }
+  .num { font-variant-numeric: tabular-nums; }
+  .gold { color: var(--gold); }
+
+  .wrap { width: min(1180px, calc(100% - 2.5rem)); margin-inline: auto; }
+  section { padding-block: clamp(3.5rem, 6.5vw, 5.5rem); }
+  section:has(+ .has-wave) { padding-bottom: calc(clamp(1.5rem, 3vw, 2.5rem) + var(--wh)); }
+  .dark { background: var(--char); color: var(--on-dark); }
+  .dark p { color: var(--on-dark-2); }
+  .sub { font-size: 1.12rem; color: var(--ink-2); max-width: 36rem; font-weight: 300; }
+  .sub strong { font-weight: 500; color: var(--ink); }
+  .dark .sub { color: var(--on-dark-2); }
+  .dark .sub strong { color: var(--on-dark); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .65rem;
+    padding: 1rem 1.7rem; border-radius: 999px; font-weight: 500; font-size: 1rem;
+    text-decoration: none; border: 1.5px solid transparent; cursor: pointer; min-height: 58px;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+    letter-spacing: .01em;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .btn-wa { background: var(--wa); color: #fff; box-shadow: 0 10px 30px rgba(31,160,92,.28); }
+  .btn-wa:hover { background: var(--wa-hover); }
+  .btn-gold { background: linear-gradient(135deg, #F0D793, #C8A24A 60%, #B08D3A); color: var(--char); box-shadow: 0 8px 24px rgba(200,162,74,.28); }
+  .btn-gold:hover { background: var(--gold-2); }
+  .btn-outline { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-outline:hover { border-color: var(--ink); }
+  .dark .btn-outline { color: var(--on-dark); border-color: rgba(255,255,255,.28); }
+  .dark .btn-outline:hover { border-color: var(--on-dark); }
+  .btn svg { width: 22px; height: 22px; flex: none; }
+  .btn-sm { min-height: 44px; padding: .6rem 1.15rem; font-size: .92rem; }
+
+  /* Image placeholders – korvaa <img>-elementeillä kun kuvat on kuvattu */
+  .ph {
+    position: relative; overflow: hidden; border-radius: var(--radius);
+    background:
+      radial-gradient(120% 80% at 80% 10%, rgba(226,197,122,.55), transparent 55%),
+      radial-gradient(90% 70% at 15% 90%, rgba(200,162,74,.35), transparent 60%),
+      linear-gradient(160deg, #2E2A24 0%, #1B1916 55%, #0F0E0C 100%);
+    color: rgba(244,240,232,.85);
+  }
+  .ph::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 45% at 62% 55%, rgba(255,231,170,.22), transparent 70%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 2px, transparent 2px 9px);
+    mix-blend-mode: screen;
+  }
+  .ring {
+    position: absolute; border-radius: 50%; border: 10px solid transparent; pointer-events: none;
+    background: linear-gradient(135deg, #F3DB98, #B8892F 45%, #F1D58A 70%, #8F6A22) border-box;
+    -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,.45));
+  }
+  .ph .cap {
+    position: absolute; left: 1.1rem; bottom: 1rem; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+    color: rgba(244,240,232,.55); font-weight: 500;
+  }
+  .ph.r169 { aspect-ratio: 16 / 9; }
+  .ph.r45 { aspect-ratio: 4 / 5; }
+  .ph.r11 { aspect-ratio: 1 / 1; }
+  .ph.r43 { aspect-ratio: 4 / 3; }
+
+  /* Kullattu tekstuuri – sama kuin kuvapaikoissa, käytetään taustana */
+  .gilt {
+    position: relative; isolation: isolate;
+    background:
+      radial-gradient(120% 80% at 80% 10%, rgba(226,197,122,.55), transparent 55%),
+      radial-gradient(90% 70% at 15% 90%, rgba(200,162,74,.35), transparent 60%),
+      linear-gradient(160deg, #2E2A24 0%, #1B1916 55%, #0F0E0C 100%);
+    color: var(--on-dark);
+  }
+  .gilt::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(60% 45% at 62% 55%, rgba(255,231,170,.22), transparent 70%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 2px, transparent 2px 9px);
+    mix-blend-mode: screen;
+  }
+  /* Hienovarainen versio tummille osioille: hiili + kultahehku + viivoitus */
+  .dark.glow { position: relative; isolation: isolate; overflow: hidden; }
+  .dark.glow::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(70% 60% at 85% 0%, rgba(226,197,122,.22), transparent 60%),
+      radial-gradient(50% 40% at 0% 100%, rgba(200,162,74,.14), transparent 60%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,.018) 0 2px, transparent 2px 9px);
+  }
+  /* Muodonrikkojat */
+  .deco.jewel { filter: drop-shadow(0 28px 36px rgba(0,0,0,.28)); }
+  .why-ring { width: clamp(120px, 11vw, 170px); left: 4%; bottom: 6%; transform: rotate(12deg); }
+  @media (max-width: 959px) { .why-ring { display: none; } }
+  .process-chain { width: clamp(220px, 26vw, 440px); right: -4%; top: 4%; transform: rotate(-14deg); z-index: 2; }
+  @media (max-width: 799px) { .process-chain { width: 160px; right: -8%; top: 2%; z-index: 0; } }
+  .deco { position: absolute; z-index: 0; pointer-events: none; }
+  .deco.ring { aspect-ratio: 1; }
+  .deco.outline { border-radius: 50%; border: 1.5px solid rgba(200,162,74,.35); aspect-ratio: 1; }
+  .deco.blob { border-radius: 50%; filter: blur(70px); background: radial-gradient(circle, rgba(226,197,122,.55), rgba(200,162,74,0) 70%); aspect-ratio: 1; }
+  .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(200,162,74,.55) 30%, rgba(200,162,74,.55) 70%, transparent); }
+  .gtext { background: linear-gradient(120deg, #F6E3A6 0%, #E2C57A 40%, #C8A24A 70%, #E9D28C 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  section { position: relative; }
+  section > .wrap { position: relative; z-index: 1; }
+
+
+  /* Aaltoilevat osioiden rajat: osion yläreuna leikataan aallon muotoon (mask), jolloin
+     edellisen osion oma tausta – tekstuureineen – näkyy aallon läpi saumattomasti */
+  :root { --wh: clamp(36px, 5.5vw, 72px); }
+  .has-wave {
+    margin-top: calc(-1 * var(--wh));
+    padding-top: calc(clamp(2.5rem, 4.5vw, 4rem) + var(--wh));
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23000' d='M0,52 C300,10 560,86 780,46 C1010,4 1230,92 1440,38 V100 H0 Z'/%3E%3C/svg%3E") top center / 100% var(--wh) no-repeat, linear-gradient(#000 0 0) 0 calc(var(--wh) - 2px) / 100% calc(100% - var(--wh) + 2px) no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23000' d='M0,52 C300,10 560,86 780,46 C1010,4 1230,92 1440,38 V100 H0 Z'/%3E%3C/svg%3E") top center / 100% var(--wh) no-repeat, linear-gradient(#000 0 0) 0 calc(var(--wh) - 2px) / 100% calc(100% - var(--wh) + 2px) no-repeat;
+  }
+  .has-wave.flip {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23000' d='M1440,52 C1140,10 880,86 660,46 C430,4 210,92 0,38 V100 H1440 Z'/%3E%3C/svg%3E"), linear-gradient(#000 0 0);
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23000' d='M1440,52 C1140,10 880,86 660,46 C430,4 210,92 0,38 V100 H1440 Z'/%3E%3C/svg%3E"), linear-gradient(#000 0 0);
+  }
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(250,248,244,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 74px; }
+  .logo { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; }
+  .logo .mark { width: 40px; height: 40px; display: block; border-radius: 50%; box-shadow: 0 2px 8px rgba(26,25,23,.18); }
+  nav { display: none; gap: 2rem; font-size: .95rem; font-weight: 400; }
+  nav a { text-decoration: none; color: var(--ink-2); }
+  nav a:hover { color: var(--ink); }
+  header .btn { display: none; }
+  @media (min-width: 900px) { nav, header .btn { display: inline-flex; } }
+
+  /* Hero */
+  .hero { position: relative; padding: 0; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 78% 50%; z-index: 0; opacity: .95; }
+  .hero.dark.glow::before { z-index: 1; background:
+      linear-gradient(90deg, rgba(21,20,18,.97) 0%, rgba(21,20,18,.92) 38%, rgba(21,20,18,.55) 62%, rgba(21,20,18,.25) 100%),
+      linear-gradient(180deg, rgba(21,20,18,.35), rgba(21,20,18,0) 30%, rgba(21,20,18,0) 70%, rgba(21,20,18,.6)); }
+  .hero .deco { z-index: 1; }
+  .hero > .wrap { z-index: 2; }
+  @media (max-width: 959px) { .hero-bg { object-position: 70% 30%; opacity: .7; } .hero.dark.glow::before { background: linear-gradient(180deg, rgba(21,20,18,.94) 0%, rgba(21,20,18,.85) 45%, rgba(21,20,18,.7) 100%); } }
+  .hero .deco.ring.a { width: clamp(260px, 32vw, 460px); right: -8%; top: -18%; border-width: 26px; opacity: .85; }
+  .hero .deco.ring.b { width: clamp(120px, 12vw, 180px); left: 46%; bottom: -60px; border-width: 12px; opacity: .55; }
+  .hero .deco.outline.c { width: clamp(300px, 40vw, 620px); left: -12%; bottom: -30%; }
+  @media (max-width: 959px) { .hero .deco.ring.b, .hero .deco.outline.c { display: none; } }
+  .hero .wrap { display: grid; gap: 3rem; align-items: center; padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+  @media (min-width: 960px) { .hero .wrap { grid-template-columns: 1.05fr .95fr; gap: 4rem; } }
+  .hero-copy { display: grid; gap: 1.6rem; }
+  .hero-copy h1 em { font-style: normal; }
+  .hero-copy h1 small { display: block; font-size: .42em; font-weight: 300; letter-spacing: 0; color: var(--on-dark-2); margin-top: .35em; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; }
+  .hero-who { display: flex; align-items: center; gap: 1rem; padding-top: .4rem; }
+  .hero-who img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: 50% 12%; flex: none; background: radial-gradient(circle at 50% 30%, #4A3E22, #1B1916 70%); box-shadow: 0 0 0 2px var(--gold), 0 0 0 6px rgba(200,162,74,.18), 0 16px 40px rgba(0,0,0,.45); }
+  .hero-who div { display: grid; gap: .1rem; }
+  .hero-who b { font-weight: 500; color: var(--on-dark); }
+  .hero-who span { font-size: .92rem; color: var(--on-dark-2); font-weight: 300; }
+  /* Hero-laskuri */
+  .hero-calc { color: var(--ink); box-shadow: 0 0 0 1px rgba(226,197,122,.25), 0 40px 90px rgba(0,0,0,.55), 0 0 120px rgba(200,162,74,.18); gap: 1.4rem; position: relative; overflow: hidden; }
+  .hero-calc::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: linear-gradient(90deg, #8F6A22, #F3DC9C 35%, #C8A24A 65%, #E4C878); }
+  .hero-calc h3 { font-size: 1.45rem; }
+  .hero-calc .karats { grid-template-columns: repeat(4, 1fr); }
+  .hero-calc .result { border-top: 1px solid var(--line); padding-top: 1.2rem; gap: .15rem; }
+  .hero-calc .result .l { font-size: .95rem; color: var(--ink-2); font-weight: 300; }
+  .hero-calc .result .r { font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 600; color: var(--gold-deep); line-height: 1.05; letter-spacing: -0.02em; }
+  .hero-calc .result .fine { font-size: .82rem; color: var(--muted); font-weight: 300; margin-top: .4rem; }
+  .hero-calc .btn-wa { width: 100%; }
+
+  /* Process – kolme askelta */
+  .process { overflow: hidden; background: var(--ivory); }
+  .process h2 { max-width: 22ch; }
+  .process .head { display: grid; gap: 1rem; margin-bottom: 3rem; }
+  .steps { display: grid; gap: 1.6rem; }
+  @media (min-width: 800px) { .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.2rem; } }
+  .stepcard { display: grid; gap: 1.2rem; min-width: 0; align-content: start; }
+  .stepvis { aspect-ratio: 4 / 3; display: block; padding: .5rem; width: 100%; min-width: 0; }
+  .stepvis img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 18px 28px rgba(26,25,23,.18)); }
+  .stepcard .ph .ring { width: 40%; aspect-ratio: 1; left: 30%; top: 30%; border-width: 8px; }
+  .stepcard .t { display: grid; gap: .5rem; padding-inline: .2rem; }
+  .stepcard .k { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; background: linear-gradient(90deg, #9A7A2E, #C8A24A); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stepcard p { color: var(--ink-2); font-weight: 300; }
+
+
+  /* Miksi nyt – hintakehitys */
+  .whynow { background: var(--ivory-2); overflow: hidden; }
+  .whynow .wrap { display: grid; gap: 2.5rem; align-items: center; }
+  @media (min-width: 960px) { .whynow .wrap { grid-template-columns: .95fr 1.05fr; gap: 4rem; } }
+  .whynow-copy { display: grid; gap: 1.4rem; }
+  .whynow-copy h2 { max-width: 16ch; }
+  .checks { display: grid; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+  .checks li { display: grid; grid-template-columns: auto 1fr; gap: .9rem; align-items: start; color: var(--ink-2); font-weight: 300; }
+  .checks li b { font-weight: 500; color: var(--ink); }
+  .checks .ck { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, #F0D793, #C8A24A 60%, #9A7A2E); display: grid; place-items: center; margin-top: .15rem; flex: none; }
+  .checks .ck svg { width: 14px; height: 14px; }
+  .chart-card { position: relative; border-radius: var(--radius); padding: clamp(1.2rem, 2.5vw, 1.8rem); display: grid; gap: 1rem; box-shadow: 0 30px 70px rgba(0,0,0,.35); }
+  .chart-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
+  .chart-head .k { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--on-dark-2); font-weight: 500; }
+  .chart-head .big { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1; letter-spacing: -.02em; }
+  .chart-head .big small { font-size: .45em; font-weight: 400; color: var(--on-dark-2); letter-spacing: 0; }
+  .chart-head .delta { font-size: .95rem; color: var(--on-dark-2); font-weight: 300; text-align: right; }
+  .chart-head .delta b { color: var(--gold-2); font-weight: 500; }
+  .chart { position: relative; }
+  .chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .chart .grid line { stroke: rgba(244,240,232,.10); stroke-width: 1; }
+  .chart .axis text { fill: rgba(244,240,232,.55); font-size: 11px; font-family: Poppins, sans-serif; font-variant-numeric: tabular-nums; }
+  .chart .bar { fill: url(#barg); transition: opacity .15s ease; }
+  .chart .bar.now { fill: url(#barnow); }
+  .chart .hit { fill: transparent; cursor: pointer; }
+  .chart .hit:hover + .bar, .chart .hit:focus + .bar { opacity: .8; }
+  .chart .lbl { fill: var(--on-dark); font-size: 12px; font-weight: 600; font-family: Poppins, sans-serif; font-variant-numeric: tabular-nums; }
+  .chart .tip { position: absolute; pointer-events: none; background: var(--ivory); color: var(--ink); border-radius: 10px; padding: .45rem .7rem; font-size: .82rem; box-shadow: 0 8px 24px rgba(0,0,0,.35); transform: translate(-50%, calc(-100% - 10px)); white-space: nowrap; opacity: 0; transition: opacity .12s ease; }
+  .chart .tip.on { opacity: 1; }
+  .chart .tip b { font-weight: 600; }
+  .chart-foot { font-size: .78rem; color: var(--on-dark-2); font-weight: 300; }
+
+  /* Video */
+  .video .wrap { display: grid; gap: 2.5rem; }
+  .video .head { display: grid; gap: 1rem; max-width: 40rem; }
+  .video-frame { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: 0 40px 90px rgba(0,0,0,.5); }
+  .video-frame video { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+  .video-frame .poster { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+  .video-frame .ring { width: 26%; aspect-ratio: 1; left: 12%; top: 22%; border-width: 12px; opacity: .8; }
+  .playbtn {
+    position: absolute; inset: 0; display: grid; place-items: center; gap: .8rem; align-content: center; text-align: center;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.55));
+  }
+  .playbtn .circle {
+    width: 84px; height: 84px; border-radius: 50%; background: linear-gradient(135deg, #F3DC9C, #C8A24A 60%, #9A7A2E); color: var(--char);
+    display: grid; place-items: center; box-shadow: 0 10px 40px rgba(200,162,74,.45);
+    transition: transform .18s ease;
+  }
+  .playbtn:hover .circle { transform: scale(1.06); }
+  .playbtn .circle svg { width: 32px; height: 32px; margin-left: 5px; }
+  .playbtn b { font-weight: 500; font-size: 1.05rem; color: var(--on-dark); }
+  .playbtn span { font-size: .9rem; color: var(--on-dark-2); }
+  .video-points { display: grid; gap: 1rem; }
+  @media (min-width: 800px) { .video-points { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+  .vp { border-top: 1px solid var(--line-dark); padding-top: 1rem; display: grid; gap: .3rem; }
+  .vp b { font-weight: 500; color: var(--on-dark); }
+  .vp span { font-size: .92rem; color: var(--on-dark-2); font-weight: 300; }
+
+  /* Calculator */
+  .calc .wrap { display: grid; gap: 2.5rem; align-items: start; }
+  @media (min-width: 960px) { .calc .wrap { grid-template-columns: .9fr 1.1fr; gap: 4rem; } }
+  .calc-intro { display: grid; gap: 1.2rem; }
+  .calc-intro .ph { aspect-ratio: 4 / 3; margin-top: 1rem; }
+  .calc-intro .ph .ring { width: 34%; aspect-ratio: 1; left: 12%; top: 40%; border-width: 7px; }
+  .calc-box {
+    background: var(--white); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem);
+    box-shadow: var(--shadow); display: grid; gap: 1.5rem; border: 1px solid var(--line);
+  }
+  .field { display: grid; gap: .6rem; }
+  .field label { font-weight: 500; font-size: .95rem; }
+  .field .hint { font-size: .88rem; color: var(--muted); font-weight: 300; }
+  .field label .hint { font-weight: 300; }
+  .karats { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; }
+  .karat {
+    border: 1.5px solid var(--line); border-radius: 12px; background: var(--ivory);
+    padding: .7rem .3rem; cursor: pointer; display: grid; gap: .05rem; place-items: center;
+    color: var(--ink); font-family: inherit; transition: border-color .15s ease, background .15s ease;
+  }
+  .karat b { font-weight: 600; font-size: 1.05rem; letter-spacing: .02em; }
+  .karat small { font-size: .72rem; color: var(--muted); }
+  .karat[aria-pressed="true"] { border-color: var(--gold); background: #FBF4E2; }
+  .karat[aria-pressed="true"] small { color: var(--gold-ink); }
+  .karat:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .weight { display: grid; grid-template-columns: 1fr auto; border: 1.5px solid var(--line); border-radius: 12px; background: var(--ivory); overflow: hidden; transition: border-color .15s ease; }
+  .weight:focus-within { border-color: var(--gold); }
+  .weight input { border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 1.7rem; font-weight: 500; padding: .6rem 1rem; width: 100%; min-width: 0; }
+  .weight input:focus { outline: none; }
+  .weight .unit { display: grid; place-items: center; padding: 0 1.1rem; color: var(--muted); font-weight: 500; }
+  .result { display: grid; gap: .55rem; border-top: 1px solid var(--line); padding-top: 1.3rem; }
+  .result-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: .98rem; }
+  .result-row .l { color: var(--ink-2); font-weight: 300; }
+  .result-row .r { font-weight: 500; }
+  .result-row.total { align-items: end; margin-top: .4rem; }
+  .result-row.total .l { font-weight: 500; color: var(--ink); font-size: 1.05rem; }
+  .result-row.total .r { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; color: var(--gold-deep); line-height: 1; letter-spacing: -0.02em; }
+  .result .fine { font-size: .82rem; color: var(--muted); font-weight: 300; }
+
+  /* Guarantee + ledger */
+  .why { overflow: hidden; }
+  .why .wrap { display: grid; gap: 3rem; }
+  @media (min-width: 960px) { .why .wrap { grid-template-columns: .9fr 1.1fr; gap: 4rem; align-items: start; } }
+  .why-copy { display: grid; gap: 1.2rem; }
+  .why-copy h2 { max-width: 18ch; }
+  .why-copy p { color: var(--ink-2); font-weight: 300; }
+  .ledger { border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow); border: 1px solid var(--line); }
+  .lrow { display: grid; grid-template-columns: 1.25fr 1fr 1fr; border-bottom: 1px solid var(--line); }
+  .lrow:last-child { border-bottom: 0; }
+  .lrow > div { padding: 1rem 1.2rem; font-size: .96rem; }
+  .lrow > div:first-child { color: var(--ink-2); font-weight: 300; }
+  .lrow > div:nth-child(2) { color: var(--muted); font-weight: 300; }
+  .lrow > div:nth-child(3) { font-weight: 500; background: linear-gradient(180deg, #FCF6E6, #F5EACB); color: var(--gold-ink); }
+  .lhead > div { font-size: .74rem !important; letter-spacing: .12em; text-transform: uppercase; font-weight: 600 !important; color: var(--muted) !important; padding-block: .8rem !important; }
+  .lhead > div:nth-child(3) { background: #FBF4E2; color: var(--gold-ink) !important; }
+  @media (max-width: 560px) { .lrow > div { padding: .85rem .75rem; font-size: .88rem; } }
+  .ledger-note { font-size: .82rem; color: var(--muted); font-weight: 300; margin-top: 1rem; }
+
+  /* Person + receipt */
+  .person .wrap { display: grid; gap: 2.5rem; align-items: center; }
+  @media (min-width: 900px) { .person .wrap { grid-template-columns: .8fr 1.2fr; gap: 4.5rem; } }
+  .portrait-wrap { position: relative; }
+  .portrait-wrap .deco.blob { width: 90%; left: 5%; top: 8%; opacity: .55; }
+  .portrait { position: relative; z-index: 1; width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 50px rgba(0,0,0,.55)); }
+  .person.dark.glow { overflow: visible; }
+  .person-chain { width: clamp(220px, 24vw, 420px); left: 2%; top: 7%; transform: rotate(22deg); z-index: 1; }
+  .person-ring { width: clamp(90px, 9vw, 150px); left: 31%; top: 40%; transform: rotate(-18deg); z-index: 1; }
+  .person-glow { width: 520px; left: -8%; top: 4%; opacity: .35; }
+  @media (max-width: 899px) { .person-chain, .person-ring, .person-glow { display: none; } }
+  .person .wrap { align-items: end; }
+  @media (min-width: 900px) {
+    .portrait-wrap { margin-bottom: calc(-1 * (clamp(1.5rem, 3vw, 2.5rem) + var(--wh)) - 24px); }
+  }
+  .person-copy { display: grid; gap: 1.3rem; }
+  .person-copy p { color: var(--on-dark-2); font-weight: 300; max-width: 38rem; }
+  .receipt {
+    background: var(--white); color: var(--ink); border-radius: 14px; padding: 1.5rem 1.6rem;
+    font-size: .92rem; display: grid; gap: .45rem; max-width: 26rem; box-shadow: var(--shadow);
+  }
+  .receipt .rh { display: flex; justify-content: space-between; font-weight: 600; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; border-bottom: 1px solid var(--line); padding-bottom: .7rem; margin-bottom: .3rem; }
+  .receipt .rl { display: grid; grid-template-columns: 1fr auto; gap: .6rem; }
+  .receipt .dim { color: var(--muted); font-size: .84rem; font-weight: 300; }
+  .receipt .sum { border-top: 1px solid var(--line); padding-top: .7rem; margin-top: .3rem; font-weight: 600; font-size: 1.05rem; }
+  .receipt-wrap { display: grid; gap: .8rem; }
+  .receipt-wrap p { font-size: .9rem; color: var(--on-dark-2); }
+
+  /* FAQ */
+  .faq { background: var(--ivory); }
+  .leima { margin: 1.5rem 0 0; display: grid; gap: .6rem; }
+  .leima img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+  .leima figcaption { font-size: .88rem; color: var(--muted); font-weight: 300; }
+  .faq .wrap { display: grid; gap: 2rem; }
+  @media (min-width: 900px) { .faq .wrap { grid-template-columns: .8fr 1.2fr; gap: 4rem; } }
+  details { border-top: 1px solid var(--line); }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; padding: 1.15rem 0; font-weight: 500; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--gold-deep); font-size: 1.4rem; font-weight: 300; }
+  details[open] summary::after { content: "–"; }
+  summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  details p { padding-bottom: 1.3rem; color: var(--ink-2); font-weight: 300; max-width: 38rem; }
+
+  /* Final */
+  .final { text-align: center; overflow: hidden; }
+  .final .sub { color: var(--on-dark-2); }
+  .final .wrap { display: grid; gap: 1.6rem; justify-items: center; }
+  .final h2 { max-width: 20ch; font-size: clamp(2rem, 4.5vw, 3.4rem); }
+  .final p { max-width: 32rem; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 2rem; font-size: .86rem; color: var(--muted); font-weight: 300; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
+
+  /* Sticky mobile CTA */
+  .sticky-cta { position: fixed; inset-inline: 0; bottom: 0; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: rgba(250,248,244,.92); backdrop-filter: blur(12px); border-top: 1px solid var(--line); z-index: 20; }
+  .sticky-cta .btn { width: 100%; }
+  .sticky-cta { transition: transform .25s ease, opacity .25s ease; }
+  .sticky-cta.hidden { transform: translateY(110%); opacity: 0; pointer-events: none; }
+  @media (min-width: 900px) { .sticky-cta { display: none; } }
+  @media (max-width: 899px) { body { padding-bottom: 94px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><img class="mark" src="kuvat/tunnus.png" alt="" width="320" height="320">Kultapoika</a>
+    <nav>
+      <a href="#miten">Näin se toimii</a>
+      <a href="#laskuri">Laske arvo</a>
+      <a href="#miksi">Miksi Kultapoika</a>
+      <a href="#ukk">Kysymyksiä</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" data-wa href="#">Kysy hintaa</a>
+  </div>
+</header>
+
+<section class="hero dark glow">
+  <img class="hero-bg" src="kuvat/hero.jpg" alt="" width="1600" height="900" fetchpriority="high">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Kulta kannattaa myydä <em class="gtext">nyt</em><small>kun hinta on korkealla</small></h1>
+      <p class="sub"><strong>Kultapoika maksaa Suomen parhaan hinnan – takuulla.</strong> Vähintään 85 % kullan päivän arvosta, ja jos saat muualta paremman kirjallisen tarjouksen, maksamme enemmän. Kauppa hoituu WhatsAppissa jo tänään.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa" data-wa href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+          Kysy hintaa WhatsAppissa
+        </a>
+      </div>
+      <div class="hero-who">
+        <img src="kuvat/sulo-taustaton.png" alt="Sulo Mäki" width="1080" height="1080">
+        <div><b>Sulo täällä, moikka!</b><span>Laita WhatsAppissa viestiä, niin kurkataan kullallesi päivän tarkka hinta 🙂</span></div>
+      </div>
+    </div>
+    <form id="laskuri" class="calc-box hero-calc" onsubmit="return false">
+      <h3>Paljonko saat kullastasi?</h3>
+
+      <div class="field">
+        <label for="weight">Paino grammoina <span class="hint">– keittiövaaka riittää</span></label>
+        <div class="weight">
+          <input id="weight" type="number" inputmode="decimal" min="0" step="0.1" value="12.4" placeholder="0">
+          <span class="unit">g</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Leima <span class="hint">– löytyy sormuksen sisäpuolelta tai ketjun lukosta</span></label>
+        <div class="karats" role="group" aria-label="Valitse kullan leima" data-karats></div>
+      </div>
+
+      <div class="result num" aria-live="polite">
+        <span class="l">Maksamme sinulle noin</span>
+        <span class="r" data-total></span>
+        <span class="fine" data-fine></span>
+      </div>
+
+      <a class="btn btn-wa" data-wa data-wa-calc href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+        Myy WhatsAppissa
+      </a>
+    </form>
+  </div>
+</section>
+
+<section id="miten" class="has-wave process">
+  <img class="deco jewel process-chain" src="kuvat/ketju.png" alt="" width="900" height="900">
+  <div class="wrap">
+    <div class="head">
+      <h2>Kysy hinta. Lähetä kulta. Saat rahat tilille.</h2>
+      <p class="sub">Kullan myyminen onnistuu kokonaan kotoa käsin. Saat meiltä hinta-arvion, lähetät kullan vakuutettuna ja saat rahat tilillesi nopeasti. Ei lomakkeita, ajanvarauksia tai turhaa säätöä.</p>
+    </div>
+    <div class="steps">
+      <div class="stepcard">
+        <div class="stepvis"><img src="kuvat/vaihe1-cut.png" alt="WhatsApp-keskustelu Kultapojan kanssa puhelimen näytöllä" width="1200" height="1600" loading="lazy"></div>
+        <div class="t">
+          <span class="k">Ensin</span>
+          <h3>Kysy kullallesi hinta WhatsAppissa</h3>
+          <p>Lähetä meille kuva korusta sekä mahdollisista leimoista. Saat nopeasti alustavan hinta-arvion ja vastaukset kaikkiin kysymyksiisi ennen kuin päätät mitään.</p>
+        </div>
+      </div>
+      <div class="stepcard">
+        <div class="stepvis"><img src="kuvat/vaihe2-cut.png" alt="Pehmustettu postipussi ja minigrip-pussi kultakoruilla" width="1200" height="900" loading="lazy"></div>
+        <div class="t">
+          <span class="k">Sitten</span>
+          <h3>Lähetä kulta meille vakuutettuna</h3>
+          <p>Saat meiltä valmiin, vakuutetun lähetyksen. Pakkaat kullan, viet lähetyksen Postiin ja seuraat sen kulkua seurantakoodilla. Me maksamme lähetyksen.</p>
+        </div>
+      </div>
+      <div class="stepcard">
+        <div class="stepvis"><img src="kuvat/vaihe3-cut.png" alt="Tarkkuusvaaka, kuitti ja tilisiirron vahvistus puhelimessa" width="1200" height="900" loading="lazy"></div>
+        <div class="t">
+          <span class="k">Lopuksi</span>
+          <h3>Saat lopullisen hinnan ja rahat tilille</h3>
+          <p>Kun lähetys saapuu meille, tarkistamme ja punnitsemme kullan videon välityksellä. Saat lopullisen hinnan ennen kauppaa, ja hyväksynnän jälkeen maksamme rahat tilillesi saman päivän aikana. Jos hinta ei kelpaa, lähetämme kullan takaisin veloituksetta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="miksi-nyt" class="has-wave flip whynow">
+  <div class="wrap">
+    <div class="whynow-copy">
+      <h2>Miksi moni myy kultaa juuri nyt?</h2>
+      <ul class="checks">
+        <li><span class="ck"><svg viewBox="0 0 16 16" fill="none" stroke="#151412" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>Kullan hinta on poikkeuksellisen korkealla.</b> Vanhoista koruista voi saada nyt huomattavasti enemmän kuin vielä muutama vuosi sitten.</span></li>
+        <li><span class="ck"><svg viewBox="0 0 16 16" fill="none" stroke="#151412" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>Tiedät hinnan ennen kuin päätät mitään.</b> Kysymällä päivän hinnan saat nopeasti käsityksen siitä, mitä kullastasi voidaan maksaa. Myyntiin ei tarvitse sitoutua.</span></li>
+        <li><span class="ck"><svg viewBox="0 0 16 16" fill="none" stroke="#151412" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>Rikkinäinenkin koru voi olla yllättävän arvokas.</b> Katkennut ketju, pariton korvakoru tai vuosia laatikossa lojunut sormus on meille ennen kaikkea kultaa – kunnosta riippumatta.</span></li>
+      </ul>
+      <div><a class="btn btn-wa" data-wa href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+        Kysy päivän hinta
+      </a></div>
+    </div>
+    <div class="chart-card gilt">
+      <div class="chart-head">
+        <div><div class="k">Kullan hinta tänään</div><div class="big num"><span data-spot></span> €<small> / g · 24K</small></div></div>
+        <div class="delta num">Vuodesta 2016<br><b data-delta></b></div>
+      </div>
+      <div class="chart" data-chart></div>
+      <div class="chart-foot">Puhtaan kullan (999) hinta euroa grammalta, vuosikeskiarvot pyöristettynä. 2026 = tämän päivän hinta.</div>
+    </div>
+  </div>
+</section>
+
+<section class="has-wave video dark glow">
+  <div class="wrap">
+    <div class="head">
+      <h2>Katso, miten vakuutettu lähetys toimii</h2>
+      <p class="sub">Kaksi minuuttia: pakkaaminen, Postin vakuutus, punnitus kameran edessä ja maksu. Ei mitään, mitä et näkisi.</p>
+    </div>
+    <div class="video-frame" data-video>
+      <!-- Kun video on valmis: korvaa alla oleva .ph + .playbtn tällä
+      <video controls playsinline preload="metadata" poster="video-poster.jpg">
+        <source src="kultapoika-lahetys.mp4" type="video/mp4">
+      </video>
+      -->
+      <img class="poster" src="kuvat/video.jpg" alt="" width="1600" height="900" loading="lazy">
+      <a class="playbtn" href="#" aria-label="Toista video">
+        <span class="circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <b>Näin lähetys toimii</b>
+        <span>2 min</span>
+      </a>
+    </div>
+    <div class="video-points">
+      <div class="vp"><b>Vakuutettu Postin lähetys</b><span>Seurantakoodi ja luovutus vain allekirjoitusta vastaan.</span></div>
+      <div class="vp"><b>Punnitus videolla</b><span>Avaamme paketin ja punnitsemme kameran edessä.</span></div>
+      <div class="vp"><b>Kuitti esine kerrallaan</b><span>Paino, karaatti, grammahinta ja summa jokaisesta.</span></div>
+      <div class="vp"><b>Rahat samana päivänä</b><span>Tilisiirto heti, kun hyväksyt kuitin.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="miksi" class="has-wave flip why" style="background: var(--ivory-2)">
+  <img class="deco jewel why-ring" src="kuvat/sormus.png" alt="" width="900" height="900">
+  <div class="wrap">
+    <div class="why-copy">
+      <h2>Sait tarjouksen muualta? Lähetä se meille.</h2>
+      <p>Jos olet jo pyytänyt kullastasi tarjouksen toiselta ostajalta, lähetä siitä kuva meille. Katsomme mitä pystymme tarjoamaan ja kerromme suoraan, jos pystymme maksamaan enemmän.</p>
+      <p>Ei tinkimistä, ei painostusta eikä sitoutumista. Saat vain toisen hinnan vertailuun ennen kuin päätät kenelle myyt.</p>
+      <div><a class="btn btn-outline" data-wa data-wa-offer href="#">Lähetä tarjous vertailuun</a></div>
+    </div>
+    <div>
+      <div class="ledger" role="table" aria-label="Kultapoika verrattuna kiertueisiin">
+        <div class="lrow lhead" role="row"><div role="columnheader"></div><div role="columnheader">Kiertueet</div><div role="columnheader">Kultapoika</div></div>
+        <div class="lrow" role="row"><div>Ostohinta kullan arvosta</div><div>Usein 50–70 %*</div><div>Vähintään 85 %</div></div>
+        <div class="lrow" role="row"><div>Hinta nähtävissä etukäteen</div><div>Ei</div><div>Joka aamu tällä sivulla</div></div>
+        <div class="lrow" role="row"><div>Kuitissa paino ja karaatti</div><div>Usein vain könttäsumma</div><div>Aina, esine kerrallaan</div></div>
+        <div class="lrow" role="row"><div>Maksu tilille</div><div>Jopa 5 pankkipäivää</div><div>Samana päivänä</div></div>
+        <div class="lrow" role="row"><div>Jos hinta ei kelpaa</div><div>Kulta mukaan autosta</div><div>Palautus maksutta</div></div>
+        <div class="lrow" role="row"><div>Puhelinmyynti</div><div>Kyllä</div><div>Ei koskaan</div></div>
+      </div>
+      <p class="ledger-note">* Julkisesti raportoitujen asiakaskokemusten ja testiostojen perusteella (Yle, Suomi24, gold-traders.co.uk 2024–2026). Vertaa aina kirjalliseen tarjoukseen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="has-wave person dark glow">
+  <img class="deco jewel person-chain" src="kuvat/ketju.png" alt="" width="900" height="900">
+  <img class="deco jewel person-ring" src="kuvat/sormus.png" alt="" width="900" height="900">
+  <span class="deco blob person-glow"></span>
+  <div class="wrap">
+    <div class="portrait-wrap"><span class="deco blob"></span><img class="portrait" src="kuvat/sulo-taustaton.png" alt="Sulo Mäki, Kultapoika" width="1080" height="1080"></div>
+    <div class="person-copy">
+      <h2>Yksi ihminen, yksi puhelin, ei myyntipuheita.</h2>
+      <p>Mun nimi on Sulo ja hoidan Kultapojan viestit, arvioinnit ja maksut itse.</p>
+      <p>Halusin rakentaa kullan myymisestä mahdollisimman yksinkertaisen: saat nopeasti hinnan, näet mistä se muodostuu ja päätät itse haluatko myydä. Ei puhelinmyyntiä, ei painostamista eikä epämääräistä könttisummaa.</p>
+      <p>Kun kulta saapuu meille, jokainen esine punnitaan ja eritellään erikseen. Saat selkeän kuitin ja tiedät tarkalleen, mistä sinulle maksetaan.</p>
+      <p>Tavoite on aika yksinkertainen: että kaupan jälkeen jää hyvä fiilis ja tiedät saaneesi reilun hinnan.</p>
+      <div class="receipt-wrap">
+        <div class="receipt num" aria-label="Esimerkkikuitti">
+          <div class="rh"><span>Kultapoika · Ostokuitti</span><span>#0231</span></div>
+          <div class="rl"><span>Sormus, leima 585</span><span>4,12 g</span></div>
+          <div class="rl dim"><span>0,585 × <span data-spot></span> €/g × 85 %</span><span data-ex-1></span></div>
+          <div class="rl"><span>Ketju, leima 750</span><span>9,80 g</span></div>
+          <div class="rl dim"><span>0,750 × <span data-spot></span> €/g × 85 %</span><span data-ex-2></span></div>
+          <div class="rl"><span>Rannekoru, leima 585</span><span>6,35 g</span></div>
+          <div class="rl dim"><span>0,585 × <span data-spot></span> €/g × 85 %</span><span data-ex-3></span></div>
+          <div class="rl sum"><span>Maksetaan tilille</span><span data-ex-sum></span></div>
+        </div>
+        <p>Näin kuitti näyttää. Jokainen esine, sen paino ja laskutapa erikseen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ukk" class="has-wave flip faq">
+  <div class="wrap">
+    <div>
+      <h2>Ennen kuin lähetät mitään</h2>
+      <p class="sub" style="margin-top:1rem">Jos kysymyksesi puuttuu, kysy WhatsAppissa – vastaamme samalla tavalla kuin tässä.</p>
+      <figure class="leima"><img src="kuvat/leima.jpg" alt="Sormuksen sisäpuolella leima 585 ja valmistajan merkki" width="1600" height="1200" loading="lazy"><figcaption>Leima löytyy sormuksen sisäpuolelta – tässä 585 ja valmistajan merkki.</figcaption></figure>
+    </div>
+    <div>
+      <details>
+        <summary>Onko postittaminen turvallista?</summary>
+        <p>Lähetys on Postin vakuutettu lähetys, joka kulkee seurantakoodilla ja luovutetaan vain allekirjoitusta vastaan. Kuittaamme WhatsAppissa heti, kun paketti on meillä. Yli 2 000 euron erät hoidamme mieluummin tapaamisella tai kotikäynnillä.</p>
+      </details>
+      <details>
+        <summary>Mitä jos en hyväksy hintaa punnituksen jälkeen?</summary>
+        <p>Kulta lähtee takaisin sinulle samalla tavalla vakuutettuna, meidän kustannuksellamme. Selityksiä ei tarvita.</p>
+      </details>
+      <details>
+        <summary>Ostatteko myös hopeaa, kolikoita ja hammaskultaa?</summary>
+        <p>Kyllä. Hinta lasketaan samalla tavalla pitoisuuden mukaan. Kellot ja jalokivikorut katsomme erikseen, koska niiden arvo voi olla enemmän kuin metallin.</p>
+      </details>
+      <details>
+        <summary>Voinko myydä, jos korut ovat rikki tai leimaa ei näy?</summary>
+        <p>Voit. Rikkinäisyys ei vaikuta hintaan, koska kulta sulatetaan. Leimattomat esineet testaamme hapolla ja XRF-mittarilla ja kerromme tuloksen ennen kuin sovitaan mitään.</p>
+      </details>
+      <details>
+        <summary>Pitääkö minun maksaa veroa?</summary>
+        <p>Perittyjen ja itse käytettyjen korujen myynnistä ei yleensä tule veroa, kun tavanomaisen koti-irtaimiston myyntivoitot jäävät alle 5 000 euron vuodessa. Sijoituskulta on eri asia – kysy tarvittaessa Verohallinnolta. Kuitistamme näet kaikki tarvittavat tiedot.</p>
+      </details>
+      <details>
+        <summary>Miksi tarvitsette henkilöllisyystodistuksen?</summary>
+        <p>Laki edellyttää, että kullan ostaja tietää, keneltä ostaa. Pyydämme kuvan henkilökortista tai ajokortista ennen maksua. Tietoja ei käytetä mihinkään muuhun.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="has-wave final gilt">
+  <img class="deco jewel" src="kuvat/sormus.png" alt="" width="900" height="900" style="width:clamp(220px,24vw,400px); right:-3%; bottom:-14%; transform:rotate(-8deg)">
+  <img class="deco jewel" src="kuvat/ketju.png" alt="" width="900" height="900" style="width:clamp(160px,16vw,260px); left:2%; top:4%; transform:rotate(22deg); opacity:.85">
+  <div class="wrap">
+    <h2>Lähetä kuva. Saat hinnan. Päätät itse.</h2>
+    <p class="sub">Yksi viesti riittää. Vastaamme tänään.</p>
+    <a class="btn btn-wa" data-wa href="#">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      Avaa WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span style="display:inline-flex;align-items:center;gap:.6rem"><img src="kuvat/tunnus.png" alt="" width="320" height="320" style="width:28px;height:28px;border-radius:50%"> © 2026 Kultapoika · [Yritys Oy, Y-tunnus]</span>
+    <span>Ostamme kultaa vain tunnistetuilta myyjiltä. Maksu aina tilisiirtona.</span>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn-wa" data-wa href="#">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+    Kysy hintaa WhatsAppissa
+  </a>
+</div>
+
+<script>
+  // ===== PÄIVITÄ NÄMÄ JOKA AAMU (tai anna skriptin hakea API:sta omalla palvelimella) =====
+  const CONFIG = {
+    spotEurPerGram: 121.00,          // puhtaan kullan (999) hinta €/g
+    updated: "12.9.2026 klo 9.00",
+    payoutRate: 0.85,                // ostoprosentti
+    whatsapp: "358401788921",        // 040 178 8921 kansainvälisessä muodossa
+    autoSpot: true,                  // hae kullan hinta automaattisesti (gold-api.com + frankfurter.app); jos haku epäonnistuu, käytetään yllä olevaa
+  };
+
+  const KARATS = [
+    { stamp: "585", k: "14K", purity: 0.585 },
+    { stamp: "750", k: "18K", purity: 0.750 },
+    { stamp: "999", k: "24K", purity: 0.999 },
+    { stamp: "?",   k: "en tiedä", purity: 0.585 },
+  ];
+
+  const eur = n => new Intl.NumberFormat("fi-FI", { style: "currency", currency: "EUR", maximumFractionDigits: 2 }).format(n);
+  const g = n => new Intl.NumberFormat("fi-FI", { maximumFractionDigits: 2 }).format(n) + " g";
+  let spotStr = "";
+  const fmtSpot = () => new Intl.NumberFormat("fi-FI", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(CONFIG.spotEurPerGram);
+  const priceFor = p => CONFIG.spotEurPerGram * p * CONFIG.payoutRate;
+
+  function renderSpot() {
+    spotStr = fmtSpot();
+    document.querySelectorAll("[data-spot]").forEach(el => el.textContent = spotStr);
+    document.querySelectorAll("[data-updated]").forEach(el => el.textContent = CONFIG.updated);
+  }
+  renderSpot();
+
+  // Laskuri
+  let selected = KARATS.find(k => k.stamp === "585");
+  const karatWrap = document.querySelector("[data-karats]");
+  const weightInput = document.getElementById("weight");
+
+  KARATS.forEach(k => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "karat";
+    b.setAttribute("aria-pressed", k === selected);
+    b.innerHTML = `<b>${k.stamp}</b><small>${k.k}</small>`;
+    b.addEventListener("click", () => {
+      selected = k;
+      karatWrap.querySelectorAll(".karat").forEach(x => x.setAttribute("aria-pressed", "false"));
+      b.setAttribute("aria-pressed", "true");
+      calc();
+    });
+    karatWrap.appendChild(b);
+  });
+
+  function calc() {
+    const w = Math.max(0, parseFloat(String(weightInput.value).replace(",", ".")) || 0);
+    const total = w * selected.purity * CONFIG.spotEurPerGram * CONFIG.payoutRate;
+    document.querySelector("[data-total]").textContent = eur(total);
+    document.querySelector("[data-fine]").textContent = selected.stamp === "?"
+      ? `Arvio 585-leiman mukaan – tarkistamme pitoisuuden. Kulta ${spotStr} €/g, ${CONFIG.updated}.`
+      : `Vähintään 85 % päivän arvosta. Kulta ${spotStr} €/g, ${CONFIG.updated}.`;
+    const msg = `Moi Kultapoika! Laskin sivullanne: ${selected.stamp === "?" ? "leimaton" : "leima " + selected.stamp}, ${w.toLocaleString("fi-FI")} g → n. ${eur(total)}. Haluaisin myydä.`;
+    document.querySelector("[data-wa-calc]").href = wa(msg);
+  }
+  weightInput.addEventListener("input", calc);
+
+  // WhatsApp-linkit
+  function wa(text) { return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`; }
+  document.querySelectorAll("[data-wa]:not([data-wa-calc]):not([data-wa-offer])").forEach(a => a.href = wa("Moi Kultapoika! Minulla olisi kultaa myytävänä. Lähetän kuvan."));
+  document.querySelector("[data-wa-offer]").href = wa("Moi Kultapoika! Sain kullastani tarjouksen toiselta ostajalta. Lähetän kuvan vertailuun.");
+
+  // Esimerkkikuitti
+  function renderReceipt() {
+    const ex = [[0.585, 4.12], [0.750, 9.80], [0.585, 6.35]];
+    let sum = 0;
+    ex.forEach(([p, w], i) => {
+      const v = p * w * CONFIG.spotEurPerGram * CONFIG.payoutRate; sum += v;
+      document.querySelector(`[data-ex-${i + 1}]`).textContent = eur(v);
+    });
+    document.querySelector("[data-ex-sum]").textContent = eur(sum);
+  }
+  renderReceipt();
+
+  // Mobiilin kiinteä nappi näkyy vasta, kun heron oma WhatsApp-nappi on vieritetty pois näkyvistä
+  (function(){ const sticky=document.querySelector(".sticky-cta"), heroBtn=document.querySelector(".hero .btn-wa"); if(!sticky||!heroBtn||!("IntersectionObserver" in window)) return;
+    new IntersectionObserver(([e])=>sticky.classList.toggle("hidden", e.isIntersecting), {threshold: 0.2}).observe(heroBtn); })();
+
+  // Video-placeholder: estä hyppy ennen kuin video on paikallaan
+  document.querySelector(".playbtn")?.addEventListener("click", e => e.preventDefault());
+
+
+  // Hintakehitys-kaavio (vuosikeskiarvot €/g, 24K – pyöristetty)
+  function drawChart(){
+    const HIST = [[2016,36],[2017,36],[2018,35],[2019,40],[2020,50],[2021,49],[2022,55],[2023,58],[2024,71],[2025,95],[2026,CONFIG.spotEurPerGram]];
+    const host = document.querySelector("[data-chart]"); if (!host) return;
+    const W=560, H=300, padL=40, padR=8, padT=28, padB=28;
+    const max = Math.ceil(Math.max(...HIST.map(d=>d[1]))/25)*25;
+    const iw = W-padL-padR, ih = H-padT-padB;
+    const bw = iw/HIST.length, gap = Math.max(2, bw*0.28);
+    const y = v => padT + ih - (v/max)*ih;
+    let g = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kullan hinta euroa grammalta 2016–2026">
+      <defs>
+        <linearGradient id="barg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8A24A"/><stop offset="1" stop-color="#7E5F1F"/></linearGradient>
+        <linearGradient id="barnow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6E3A6"/><stop offset=".5" stop-color="#E2C57A"/><stop offset="1" stop-color="#B08D3A"/></linearGradient>
+      </defs><g class="grid">`;
+    const ticks=[]; for (let t=0;t<=max;t+=25) ticks.push(t);
+    ticks.forEach(t=>{ g+=`<line x1="${padL}" x2="${W-padR}" y1="${y(t)}" y2="${y(t)}"/>`; });
+    g+=`</g><g class="axis">`;
+    ticks.forEach(t=>{ g+=`<text x="${padL-8}" y="${y(t)+4}" text-anchor="end">${t}</text>`; });
+    HIST.forEach((d,i)=>{ const cx=padL+bw*i+bw/2; if(i%2===0||i===HIST.length-1) g+=`<text x="${cx}" y="${H-8}" text-anchor="middle">${d[0]}</text>`; });
+    g+=`</g><g class="bars">`;
+    HIST.forEach((d,i)=>{
+      const x=padL+bw*i+gap/2, w=bw-gap, top=y(d[1]), h=padT+ih-top, now=i===HIST.length-1;
+      g+=`<rect class="hit" x="${padL+bw*i}" y="${padT}" width="${bw}" height="${ih}" data-i="${i}" tabindex="0"/>`;
+      g+=`<path class="bar${now?' now':''}" d="M${x},${padT+ih} v${-(h-4)} a4,4 0 0 1 4,-4 h${w-8} a4,4 0 0 1 4,4 v${h-4} z"/>`;
+      if (now) g+=`<text class="lbl" x="${x+w/2}" y="${top-10}" text-anchor="middle">${d[1].toLocaleString("fi-FI",{maximumFractionDigits:0})} €</text>`;
+    });
+    g+=`</g></svg><div class="tip"></div>`;
+    host.innerHTML=g;
+    const tip=host.querySelector(".tip"), svg=host.querySelector("svg");
+    const show=(i)=>{ const d=HIST[i]; const r=svg.getBoundingClientRect(); const sx=r.width/W; const cx=(padL+bw*i+bw/2)*sx; const ty=y(d[1])*sx;
+      tip.innerHTML=`<b>${d[0]}</b> · ${d[1].toLocaleString("fi-FI",{maximumFractionDigits:0})} €/g${i===HIST.length-1?" (tänään)":""}`; tip.style.left=cx+"px"; tip.style.top=ty+"px"; tip.classList.add("on"); };
+    host.querySelectorAll(".hit").forEach(h=>{ const i=+h.dataset.i; h.addEventListener("mouseenter",()=>show(i)); h.addEventListener("focus",()=>show(i)); h.addEventListener("mouseleave",()=>tip.classList.remove("on")); h.addEventListener("blur",()=>tip.classList.remove("on")); });
+    const first=HIST[0][1], last=HIST[HIST.length-1][1];
+    document.querySelector("[data-delta]").textContent = "+" + Math.round((last/first-1)*100) + " %";
+  }
+  drawChart();
+
+  // Automaattinen päivän hinta: XAU USD/oz (gold-api.com) × USD→EUR (frankfurter.app) / 31,1035
+  (async function autoSpot(){
+    if (!CONFIG.autoSpot) return;
+    try {
+      const [g, fx] = await Promise.all([
+        fetch("https://api.gold-api.com/price/XAU").then(r => r.json()),
+        fetch("https://api.frankfurter.dev/v1/latest?base=USD&symbols=EUR").then(r => r.json())
+      ]);
+      const usdOz = Number(g.price), eurUsd = Number(fx.rates && fx.rates.EUR);
+      if (!(usdOz > 0) || !(eurUsd > 0)) return;
+      CONFIG.spotEurPerGram = Math.round((usdOz * eurUsd / 31.1035) * 100) / 100;
+      const d = new Date();
+      CONFIG.updated = d.toLocaleDateString("fi-FI") + " klo " + d.toLocaleTimeString("fi-FI", { hour: "2-digit", minute: "2-digit" });
+      renderSpot(); renderReceipt(); drawChart(); calc();
+    } catch (e) { /* pidetään käsin asetettu hinta */ }
+  })();
+
+  calc();
+</script>
+</body>
+</html>
