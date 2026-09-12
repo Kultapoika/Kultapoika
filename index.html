@@ -756,7 +756,7 @@
     document.querySelector("[data-fine]").textContent = selected.stamp === "?"
       ? `Arvio 585-leiman mukaan – tarkistamme pitoisuuden. Kulta ${spotStr} €/g, ${CONFIG.updated}.`
       : `Vähintään 85 % päivän arvosta. Kulta ${spotStr} €/g, ${CONFIG.updated}.`;
-    const msg = `Moi Kultapoika! Laskin sivullanne: ${selected.stamp === "?" ? "leimaton" : "leima " + selected.stamp}, ${w.toLocaleString("fi-FI")} g → n. ${eur(total)}. Haluaisin myydä.`;
+    const msg = `Moi Sulo, laskurisi tarjosi tällaista hintaa: ${selected.stamp === "?" ? "leimaton" : "leima " + selected.stamp}, ${w.toLocaleString("fi-FI")} g → n. ${eur(total)}. Voitko varmistaa hinnan?`;
     document.querySelector("[data-wa-calc]").href = wa(msg);
   }
   weightInput.addEventListener("input", calc);
