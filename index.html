@@ -636,11 +636,11 @@
         <div class="receipt num" aria-label="Esimerkkikuitti">
           <div class="rh"><span>Kultapoika · Ostokuitti</span><span>#0231</span></div>
           <div class="rl"><span>Sormus, leima 585</span><span>4,12 g</span></div>
-          <div class="rl dim"><span>0,585 × <span data-spot></span> €/g × 85 %</span><span data-ex-1></span></div>
+          <div class="rl dim"><span>0,585 × <span data-spot></span> €/g × <span data-rate></span> %</span><span data-ex-1></span></div>
           <div class="rl"><span>Ketju, leima 750</span><span>9,80 g</span></div>
-          <div class="rl dim"><span>0,750 × <span data-spot></span> €/g × 85 %</span><span data-ex-2></span></div>
+          <div class="rl dim"><span>0,750 × <span data-spot></span> €/g × <span data-rate></span> %</span><span data-ex-2></span></div>
           <div class="rl"><span>Rannekoru, leima 585</span><span>6,35 g</span></div>
-          <div class="rl dim"><span>0,585 × <span data-spot></span> €/g × 85 %</span><span data-ex-3></span></div>
+          <div class="rl dim"><span>0,585 × <span data-spot></span> €/g × <span data-rate></span> %</span><span data-ex-3></span></div>
           <div class="rl sum"><span>Maksetaan tilille</span><span data-ex-sum></span></div>
         </div>
         <p>Näin kuitti näyttää. Jokainen esine, sen paino ja laskutapa erikseen.</p>
@@ -725,7 +725,8 @@
   const CONFIG = {
     spotEurPerGram: 121.00,          // puhtaan kullan (999) hinta €/g
     updated: "12.9.2026 klo 9.00",
-    payoutRate: 0.85,                // ostoprosentti
+    payoutRate: 0.75,                // ostoprosentti romukullasta (korut, ketjut, hammaskulta)
+    payoutBullion: 0.85,             // ostoprosentti sijoituskullasta (999-harkot ja -kolikot)
     whatsapp: "358401788921",        // 040 178 8921 kansainvälisessä muodossa
     autoSpot: true,                  // hae kullan hinta automaattisesti (gold-api.com + frankfurter.app); jos haku epäonnistuu, käytetään yllä olevaa
     metaPixelId: "",                 // Meta Pixel ID (Events Manager → Data sources), esim. "1234567890123456"
@@ -735,7 +736,7 @@
   const KARATS = [
     { stamp: "585", k: "14K", purity: 0.585 },
     { stamp: "750", k: "18K", purity: 0.750 },
-    { stamp: "999", k: "24K", purity: 0.999 },
+    { stamp: "999", k: "24K", purity: 0.999, bullion: true },
     { stamp: "?",   k: "en tiedä", purity: 0.585 },
   ];
 
@@ -743,12 +744,14 @@
   const g = n => new Intl.NumberFormat("fi-FI", { maximumFractionDigits: 2 }).format(n) + " g";
   let spotStr = "";
   const fmtSpot = () => new Intl.NumberFormat("fi-FI", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(CONFIG.spotEurPerGram);
+  const rateFor = k => (k.bullion ? CONFIG.payoutBullion : CONFIG.payoutRate);
   const priceFor = p => CONFIG.spotEurPerGram * p * CONFIG.payoutRate;
 
   function renderSpot() {
     spotStr = fmtSpot();
     document.querySelectorAll("[data-spot]").forEach(el => el.textContent = spotStr);
     document.querySelectorAll("[data-updated]").forEach(el => el.textContent = CONFIG.updated);
+    document.querySelectorAll("[data-rate]").forEach(el => el.textContent = Math.round(CONFIG.payoutRate*100));
   }
   renderSpot();
 
@@ -773,11 +776,14 @@
 
   function calc() {
     const w = Math.max(0, parseFloat(String(weightInput.value).replace(",", ".")) || 0);
-    const total = w * selected.purity * CONFIG.spotEurPerGram * CONFIG.payoutRate;
+    const rate = rateFor(selected);
+    const total = w * selected.purity * CONFIG.spotEurPerGram * rate;
     document.querySelector("[data-total]").textContent = eur(total);
     document.querySelector("[data-fine]").textContent = selected.stamp === "?"
       ? `Arvio 585-leiman mukaan – tarkistamme pitoisuuden. Kulta ${spotStr} €/g, ${CONFIG.updated}.`
-      : `Vähintään 85 % päivän arvosta. Kulta ${spotStr} €/g, ${CONFIG.updated}.`;
+      : selected.bullion
+        ? `Sijoituskulta (harkot, kolikot): ${Math.round(rate*100)} % päivän arvosta. Kulta ${spotStr} €/g, ${CONFIG.updated}.`
+        : `${Math.round(rate*100)} % päivän arvosta. Kulta ${spotStr} €/g, ${CONFIG.updated}.`;
     const msg = `Moi Sulo, laskurisi tarjosi tällaista hintaa: ${selected.stamp === "?" ? "leimaton" : "leima " + selected.stamp}, ${w.toLocaleString("fi-FI")} g → n. ${eur(total)}. Voitko varmistaa hinnan?`;
     document.querySelector("[data-wa-calc]").href = wa(msg);
   }
