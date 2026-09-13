@@ -584,7 +584,7 @@
       </video>
       -->
       <img class="poster" src="kuvat/video.jpg" alt="" width="1600" height="900" loading="lazy">
-      <a class="playbtn" href="#" aria-label="Toista video">
+      <a class="playbtn" href="#video" aria-label="Toista video">
         <span class="circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         <b>Näin lähetys toimii</b>
         <span>2 min</span>
@@ -813,6 +813,12 @@
   // Mobiilin kiinteä nappi näkyy vasta, kun heron oma WhatsApp-nappi on vieritetty pois näkyvistä
   (function(){ const sticky=document.querySelector(".sticky-cta"), heroBtn=document.querySelector(".hero .btn-wa"); if(!sticky||!heroBtn||!("IntersectionObserver" in window)) return;
     new IntersectionObserver(([e])=>sticky.classList.toggle("hidden", e.isIntersecting), {threshold: 0.2}).observe(heroBtn); })();
+
+  // Sivun sisäiset linkit: vieritä kohtaan, mutta pidä osoiterivi puhtaana (ei #miten jne.)
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
+    const id = a.getAttribute("href").slice(1); const el = id && document.getElementById(id);
+    e.preventDefault(); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }));
 
   // Video-placeholder: estä hyppy ennen kuin video on paikallaan
   document.querySelector(".playbtn")?.addEventListener("click", e => e.preventDefault());
