@@ -176,7 +176,7 @@
   .deco.blob { border-radius: 50%; filter: blur(70px); background: radial-gradient(circle, rgba(226,197,122,.55), rgba(200,162,74,0) 70%); aspect-ratio: 1; }
   .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(200,162,74,.55) 30%, rgba(200,162,74,.55) 70%, transparent); }
   .gtext { background: linear-gradient(120deg, #F6E3A6 0%, #E2C57A 40%, #C8A24A 70%, #E9D28C 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  section { position: relative; }
+  section { position: relative; scroll-margin-top: 74px; }
   section > .wrap { position: relative; z-index: 1; }
 
 
@@ -193,22 +193,38 @@
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23000' d='M1440,52 C1140,10 880,86 660,46 C430,4 210,92 0,38 V100 H1440 Z'/%3E%3C/svg%3E"), linear-gradient(#000 0 0);
             mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23000' d='M1440,52 C1140,10 880,86 660,46 C430,4 210,92 0,38 V100 H1440 Z'/%3E%3C/svg%3E"), linear-gradient(#000 0 0);
   }
-  /* Header */
+  /* Header – läpinäkyvä heron päällä, sumea pohja vieritettäessä */
   header {
-    position: sticky; top: 0; z-index: 30;
-    background: rgba(250,248,244,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 30;
+    background: transparent; border-bottom: 1px solid transparent;
+    transition: background .25s ease, border-color .25s ease, color .25s ease;
+    color: var(--on-dark);
+  }
+  header.scrolled, header.open {
+    background: rgba(250,248,244,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom-color: var(--line); color: var(--ink);
   }
   header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 74px; }
-  .logo { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; }
+  .logo { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: inherit; }
   .logo:focus { outline: none; }
   .logo:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; border-radius: 8px; }
-  .logo .mark { width: 34px; height: 34px; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(26,25,23,.18); }
+  .logo .mark { width: 34px; height: 34px; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
   nav { display: none; gap: 2rem; font-size: .95rem; font-weight: 400; }
-  nav a { text-decoration: none; color: var(--ink-2); }
-  nav a:hover { color: var(--ink); }
-  header .btn { display: none; }
-  @media (min-width: 900px) { nav, header .btn { display: inline-flex; } }
+  nav a { text-decoration: none; color: inherit; opacity: .85; }
+  nav a:hover { opacity: 1; }
+  header .btn-sm { display: none; }
+  .menu-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.15); color: inherit; cursor: pointer; padding: 0; }
+  header.scrolled .menu-btn, header.open .menu-btn { border-color: var(--line); background: transparent; }
+  .menu-btn svg { width: 22px; height: 22px; }
+  .menu-btn .x { display: none; }
+  header.open .menu-btn .bars { display: none; }
+  header.open .menu-btn .x { display: block; }
+  .mobile-menu { display: none; position: fixed; top: 74px; left: 0; right: 0; z-index: 29; background: rgba(250,248,244,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); padding: .6rem 1.25rem 1.25rem; }
+  .mobile-menu.open { display: grid; gap: .2rem; }
+  .mobile-menu a { text-decoration: none; color: var(--ink); font-size: 1.15rem; font-weight: 500; padding: .85rem .25rem; border-bottom: 1px solid var(--line); }
+  .mobile-menu a:last-of-type { border-bottom: 0; }
+  .mobile-menu .btn { margin-top: .6rem; }
+  @media (min-width: 900px) { nav, header .btn-sm { display: inline-flex; } .menu-btn, .mobile-menu { display: none !important; } }
 
   /* Hero */
   .hero { position: relative; padding: 0; overflow: hidden; }
@@ -223,7 +239,7 @@
   .hero .deco.ring.b { width: clamp(120px, 12vw, 180px); left: 46%; bottom: -60px; border-width: 12px; opacity: .55; }
   .hero .deco.outline.c { width: clamp(300px, 40vw, 620px); left: -12%; bottom: -30%; }
   @media (max-width: 959px) { .hero .deco.ring.b, .hero .deco.outline.c { display: none; } }
-  .hero .wrap { display: grid; gap: 3rem; align-items: center; padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+  .hero .wrap { display: grid; gap: 3rem; align-items: center; padding-block: calc(74px + clamp(2.5rem, 5vw, 5rem)) clamp(3.5rem, 7vw, 6.5rem); }
   @media (min-width: 960px) { .hero .wrap { grid-template-columns: 1.05fr .95fr; gap: 4rem; } }
   .hero-copy { display: grid; gap: 1.6rem; }
   .pill { display: inline-flex; align-items: center; gap: .5rem; align-self: start; padding: .5rem .95rem .5rem .8rem; border-radius: 999px; font-size: .88rem; font-weight: 500; color: var(--gold-2); background: rgba(200,162,74,.12); border: 1px solid rgba(226,197,122,.35); backdrop-filter: blur(6px); }
@@ -463,8 +479,20 @@
       <a href="kuolinpesa.html">Kuolinpesät</a>
     </nav>
     <a class="btn btn-gold btn-sm" data-wa href="#" target="_blank" rel="noopener">Kysy hintaa</a>
+    <button class="menu-btn" type="button" aria-label="Valikko" aria-expanded="false" data-menu-btn>
+      <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
 </header>
+<div class="mobile-menu" data-mobile-menu>
+  <a href="#miten">Näin se toimii</a>
+  <a href="#laskuri">Laske arvo</a>
+  <a href="#miksi">Miksi Kultapoika</a>
+  <a href="#ukk">Kysymyksiä</a>
+  <a href="kuolinpesa.html">Kuolinpesät</a>
+  <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener">Sovi kotikäynti WhatsAppissa</a>
+</div>
 
 <section class="hero dark glow">
   <img class="hero-bg" src="kuvat/hero.jpg" alt="" width="1600" height="900" fetchpriority="high">
@@ -825,6 +853,18 @@
   // Mobiilin kiinteä nappi näkyy vasta, kun heron oma WhatsApp-nappi on vieritetty pois näkyvistä
   (function(){ const sticky=document.querySelector(".sticky-cta"), heroBtn=document.querySelector(".hero .btn-wa"); if(!sticky||!heroBtn||!("IntersectionObserver" in window)) return;
     new IntersectionObserver(([e])=>sticky.classList.toggle("hidden", e.isIntersecting), {threshold: 0.2}).observe(heroBtn); })();
+
+  // Header: läpinäkyvä ylhäällä, sumea pohja vieritettäessä; mobiilivalikko
+  (function(){
+    const hdr = document.querySelector("header"), btn = document.querySelector("[data-menu-btn]"), menu = document.querySelector("[data-mobile-menu]");
+    const onScroll = () => hdr.classList.toggle("scrolled", window.scrollY > 24);
+    onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
+    if (btn && menu) {
+      const setOpen = o => { menu.classList.toggle("open", o); hdr.classList.toggle("open", o); btn.setAttribute("aria-expanded", o); };
+      btn.addEventListener("click", () => setOpen(!menu.classList.contains("open")));
+      menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setOpen(false)));
+    }
+  })();
 
   // Sivun sisäiset linkit: vieritä kohtaan, mutta pidä osoiterivi puhtaana (ei #miten jne.)
   document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
