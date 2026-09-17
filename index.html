@@ -310,6 +310,28 @@
   .chart .tip b { font-weight: 600; }
   .chart-foot { font-size: .78rem; color: var(--on-dark-2); font-weight: 300; }
 
+  /* Varaa kotikäynti -lomake */
+  .booking { display: grid; gap: 2.5rem; align-items: start; }
+  @media (min-width: 960px) { .booking { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+  .booking .video-points { grid-template-columns: 1fr 1fr; }
+  .book-form { background: var(--white); color: var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); display: grid; gap: 1rem; box-shadow: 0 0 0 1px rgba(226,197,122,.25), 0 40px 90px rgba(0,0,0,.5); position: relative; overflow: hidden; }
+  .book-form::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: linear-gradient(90deg, #8F6A22, #F3DC9C 35%, #C8A24A 65%, #E4C878); }
+  .book-form label { display: grid; gap: .4rem; font-weight: 500; font-size: .95rem; }
+  .book-form .opt { font-weight: 300; color: var(--muted); }
+  .book-form input[type="text"], .book-form input[type="tel"], .book-form textarea { font: inherit; font-weight: 400; padding: .8rem 1rem; border: 1.5px solid var(--line); border-radius: 12px; background: var(--ivory); color: var(--ink); width: 100%; transition: border-color .15s ease; }
+  .book-form input:focus, .book-form textarea:focus { outline: none; border-color: var(--gold); }
+  .book-form textarea { resize: vertical; min-height: 84px; }
+  .f2 { display: grid; gap: 1rem; }
+  @media (min-width: 560px) { .f2 { grid-template-columns: 1fr 1fr; } }
+  .chk { display: flex !important; align-items: center; gap: .6rem; font-weight: 300 !important; color: var(--ink-2); }
+  .chk input { width: 18px; height: 18px; accent-color: var(--gold-deep); }
+  .chk a { color: var(--gold-deep); }
+  .book-form .btn { width: 100%; }
+  .form-msg { font-size: .95rem; padding: .8rem 1rem; border-radius: 10px; background: #EAF6EE; color: #1B5E3A; }
+  .form-msg.err { background: #FBEAEA; color: #8A2323; }
+  .form-alt { font-size: .88rem; color: var(--muted); font-weight: 300; text-align: center; }
+  .form-alt a { color: var(--gold-deep); }
+
   /* Video */
   .video .wrap { display: grid; gap: 2.5rem; }
   .video .head { display: grid; gap: 1rem; max-width: 40rem; }
@@ -475,6 +497,7 @@
       <a href="#miten">Näin se toimii</a>
       <a href="#laskuri">Laske arvo</a>
       <a href="#miksi">Miksi Kultapoika</a>
+      <a href="#varaa">Varaa kotikäynti</a>
       <a href="#ukk">Kysymyksiä</a>
       <a href="kuolinpesa.html">Kuolinpesät</a>
     </nav>
@@ -489,6 +512,7 @@
   <a href="#miten">Näin se toimii</a>
   <a href="#laskuri">Laske arvo</a>
   <a href="#miksi">Miksi Kultapoika</a>
+  <a href="#varaa">Varaa kotikäynti</a>
   <a href="#ukk">Kysymyksiä</a>
   <a href="kuolinpesa.html">Kuolinpesät</a>
   <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener">Sovi kotikäynti WhatsAppissa</a>
@@ -603,31 +627,37 @@
   </div>
 </section>
 
-<section class="has-wave video dark glow">
-  <div class="wrap">
+<section id="varaa" class="has-wave video dark glow">
+  <div class="wrap booking">
     <div class="head">
-      <h2>Katso, miten kotikäynti toimii</h2>
-      <p class="sub">Kaksi minuuttia: ajan sopiminen, punnitus ja testaus pöydälläsi, kuitti ja tilisiirto. Ei mitään, mitä et näkisi.</p>
+      <h2>Varaa kotikäynti</h2>
+      <p class="sub">Jätä yhteystietosi, niin soitan tai laitan viestiä ja sovitaan sinulle sopiva aika. Käynti on maksuton eikä sido mihinkään – ja kahvileipä tulee mukana.</p>
+      <div class="video-points" style="margin-top:1.8rem">
+        <div class="vp"><b>Tulen luoksesi</b><span>Tampere ja lähikunnat, sinulle sopivaan aikaan.</span></div>
+        <div class="vp"><b>Punnitus pöydälläsi</b><span>Vaaka ja testit sinun nähtesi, esine kerrallaan.</span></div>
+        <div class="vp"><b>Kuitti esine kerrallaan</b><span>Paino, karaatti, grammahinta ja summa jokaisesta.</span></div>
+        <div class="vp"><b>Rahat ennen kuin lähden</b><span>Tilisiirto paikan päällä, kun hyväksyt kuitin.</span></div>
+      </div>
     </div>
-    <div class="video-frame" data-video>
-      <!-- Kun video on valmis: korvaa alla oleva .ph + .playbtn tällä
-      <video controls playsinline preload="metadata" poster="video-poster.jpg">
-        <source src="kultapoika-lahetys.mp4" type="video/mp4">
-      </video>
-      -->
-      <img class="poster" src="kuvat/video.jpg" alt="" width="1600" height="900" loading="lazy">
-      <a class="playbtn" href="#video" aria-label="Toista video">
-        <span class="circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-        <b>Näin lähetys toimii</b>
-        <span>2 min</span>
-      </a>
-    </div>
-    <div class="video-points">
-      <div class="vp"><b>Tulen luoksesi</b><span>Tampere ja lähikunnat, sinulle sopivaan aikaan.</span></div>
-      <div class="vp"><b>Punnitus pöydälläsi</b><span>Vaaka ja testit sinun nähtesi, esine kerrallaan.</span></div>
-      <div class="vp"><b>Kuitti esine kerrallaan</b><span>Paino, karaatti, grammahinta ja summa jokaisesta.</span></div>
-      <div class="vp"><b>Rahat ennen kuin lähden</b><span>Tilisiirto paikan päällä, kun hyväksyt kuitin.</span></div>
-    </div>
+    <form class="book-form" data-book action="https://formsubmit.co/ajax/sulomaki01@gmail.com" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Kotikäyntipyyntö – kultapoika.fi">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="f2">
+        <label>Nimi<input type="text" name="Nimi" required autocomplete="name"></label>
+        <label>Puhelin<input type="tel" name="Puhelin" required autocomplete="tel" inputmode="tel"></label>
+      </div>
+      <div class="f2">
+        <label>Paikkakunta<input type="text" name="Paikkakunta" required placeholder="esim. Tampere, Hervanta" autocomplete="address-level2"></label>
+        <label>Sopiva aika<input type="text" name="Sopiva aika" placeholder="esim. arki-iltaisin klo 17 jälkeen"></label>
+      </div>
+      <label><span>Mitä kultaa sinulla on? <span class="opt">(vapaaehtoinen)</span></span><textarea name="Kulta" rows="3" placeholder="esim. muutama sormus ja katkennut ketju, en tiedä leimoja"></textarea></label>
+      <label class="chk"><input type="checkbox" name="Tietosuoja" value="Hyväksytty" required> Olen lukenut <a href="tietosuoja.html" target="_blank" rel="noopener">tietosuojaselosteen</a></label>
+      <button class="btn btn-gold" type="submit">Lähetä varauspyyntö</button>
+      <p class="form-msg" data-form-msg hidden></p>
+      <p class="form-alt">Tai suoraan: <a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a> · <a href="tel:+358401788921">040 178 8921</a></p>
+    </form>
   </div>
 </section>
 
@@ -849,6 +879,27 @@
   // Mobiilin kiinteä nappi näkyy vasta, kun heron oma WhatsApp-nappi on vieritetty pois näkyvistä
   (function(){ const sticky=document.querySelector(".sticky-cta"), heroBtn=document.querySelector(".hero .btn-wa"); if(!sticky||!heroBtn||!("IntersectionObserver" in window)) return;
     new IntersectionObserver(([e])=>sticky.classList.toggle("hidden", e.isIntersecting), {threshold: 0.2}).observe(heroBtn); })();
+
+  // Varauslomake: lähetys FormSubmit-palvelun kautta sähköpostiin ilman sivun vaihtoa
+  (function(){
+    const f = document.querySelector("[data-book]"); if (!f) return;
+    const msg = f.querySelector("[data-form-msg]"), btn = f.querySelector("button[type=submit]");
+    f.addEventListener("submit", async e => {
+      e.preventDefault();
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      btn.disabled = true; btn.textContent = "Lähetetään…"; msg.hidden = true; msg.classList.remove("err");
+      try {
+        const r = await fetch(f.action, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(f) });
+        if (!r.ok) throw new Error();
+        f.querySelectorAll("input:not([type=hidden]), textarea").forEach(i => i.type === "checkbox" ? i.checked = false : i.value = "");
+        msg.textContent = "Kiitos! Olen sinuun yhteydessä viimeistään huomenna."; msg.hidden = false;
+        if (window.fbq) fbq('track', 'Lead'); if (window.gtag) gtag('event', 'generate_lead', { source: "lomake" });
+      } catch (err) {
+        msg.textContent = "Lähetys ei onnistunut – laita viestiä WhatsAppissa tai soita 040 178 8921."; msg.classList.add("err"); msg.hidden = false;
+      }
+      btn.disabled = false; btn.textContent = "Lähetä varauspyyntö";
+    });
+  })();
 
   // Header: läpinäkyvä ylhäällä, sumea pohja vieritettäessä; mobiilivalikko
   (function(){
